@@ -1,8 +1,8 @@
 import Image from '@/components/ui/image';
 import { useIsMounted } from '@/lib/hooks/use-is-mounted';
 import { useIsDarkMode } from '@/lib/hooks/use-is-dark-mode';
-import lightLogo from '@/assets/images/logo-icon.svg';
-import darkLogo from '@/assets/images/logo-icon-white.png.ico';
+import lightLogo from '@/assets/images/Logo.png';
+import darkLogo from '@/assets/images/Logo.png';
 
 const Logo: React.FC<React.SVGAttributes<{}>> = (props) => {
   const isMounted = useIsMounted();
@@ -15,7 +15,7 @@ const Logo: React.FC<React.SVGAttributes<{}>> = (props) => {
           <Image src={darkLogo} alt="Ronx" priority width={28} />
         )}
         {isMounted && !isDarkMode && (
-          <Image src={darkLogo} alt="Ronx" priority width={28} />
+          <Image src={lightLogo} alt="Criptic" priority width={28} />
         )}
       </span>
     </div>
